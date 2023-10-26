@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20231026 10:17:31.088" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="C:\Users\mitendra\PycharmProjects\Robot_DDT\TestCases\Test.robot">
+<test id="s1-t1" name="LoginTest" line="17">
+<kw name="open my browser" library="Login_resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231026 10:17:31.606" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg timestamp="20231026 10:17:31.976" level="WARN">The chromedriver version (117.0.5938.62) detected in PATH at F:\Python_tools\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.117); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231026 10:17:31.606" endtime="20231026 10:17:35.070"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231026 10:17:35.070" endtime="20231026 10:17:35.199"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231026 10:17:35.200" endtime="20231026 10:17:35.200"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:31.606" endtime="20231026 10:17:35.200"/>
+</kw>
+<kw name="Register" library="Login_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${register_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:35.204" level="INFO">Clicking element 'xpath:(//a[normalize-space()='Register'])[1]'.</msg>
+<status status="PASS" starttime="20231026 10:17:35.203" endtime="20231026 10:17:37.362"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:35.202" endtime="20231026 10:17:37.362"/>
+</kw>
+<kw name="Select_gender" library="Login_resource">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20231026 10:17:37.364" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20231026 10:17:37.364" endtime="20231026 10:17:38.977"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:37.363" endtime="20231026 10:17:38.977"/>
+</kw>
+<kw name="Enter_FName" library="Login_resource">
+<arg>${Fname}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${name_xpath}</arg>
+<arg>${Fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:38.980" level="INFO">Typing text 'Test' into text field 'xpath://input[@id='FirstName']'.</msg>
+<status status="PASS" starttime="20231026 10:17:38.979" endtime="20231026 10:17:40.623"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:38.978" endtime="20231026 10:17:40.623"/>
+</kw>
+<kw name="Enter_Lname" library="Login_resource">
+<arg>${Lname}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastname_xpath}</arg>
+<arg>${Lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:40.627" level="INFO">Typing text 'Xiao' into text field 'xpath:(//input[@id='LastName'])[1]'.</msg>
+<status status="PASS" starttime="20231026 10:17:40.625" endtime="20231026 10:17:42.270"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:40.624" endtime="20231026 10:17:42.270"/>
+</kw>
+<kw name="DOB" library="Login_resource">
+<arg>${Day}</arg>
+<arg>${Month}</arg>
+<arg>${Year}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${day_xpath}</arg>
+<arg>${Day}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231026 10:17:42.274" level="INFO">Selecting options from selection list 'xpath://select[@name='DateOfBirthDay']' by label 13.</msg>
+<status status="PASS" starttime="20231026 10:17:42.272" endtime="20231026 10:17:46.525"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${month_xpath}</arg>
+<arg>${Month}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231026 10:17:46.526" level="INFO">Selecting options from selection list 'xpath://select[@name='DateOfBirthMonth']' by label October.</msg>
+<status status="PASS" starttime="20231026 10:17:46.525" endtime="20231026 10:17:50.729"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${year_xpath}</arg>
+<arg>${Year}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231026 10:17:50.731" level="INFO">Selecting options from selection list 'xpath://select[@name='DateOfBirthYear']' by label 1997.</msg>
+<status status="PASS" starttime="20231026 10:17:50.729" endtime="20231026 10:17:54.859"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:42.271" endtime="20231026 10:17:54.859"/>
+</kw>
+<kw name="Enter_Email" library="Login_resource">
+<arg>${Email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_xpath}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:54.863" level="INFO">Typing text 'testxiao@gmail.com' into text field 'xpath:(//input[@id='Email'])[1]'.</msg>
+<status status="PASS" starttime="20231026 10:17:54.862" endtime="20231026 10:17:56.518"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:54.861" endtime="20231026 10:17:56.518"/>
+</kw>
+<kw name="NewsLetter" library="Login_resource">
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>Newsletter</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20231026 10:17:56.522" level="INFO">Verifying checkbox 'Newsletter' is selected.</msg>
+<status status="PASS" starttime="20231026 10:17:56.521" endtime="20231026 10:17:58.104"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:56.520" endtime="20231026 10:17:58.104"/>
+</kw>
+<kw name="Passward" library="Login_resource">
+<arg>${Pass}</arg>
+<arg>${ConfPass}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pass_xpath}</arg>
+<arg>${Pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:58.107" level="INFO">Typing text 'test@123' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20231026 10:17:58.106" endtime="20231026 10:17:59.751"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${confPass_xpath}</arg>
+<arg>${ConfPass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 10:17:59.753" level="INFO">Typing text 'test@123' into text field 'xpath://input[@id='ConfirmPassword']'.</msg>
+<status status="PASS" starttime="20231026 10:17:59.751" endtime="20231026 10:18:01.379"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:58.105" endtime="20231026 10:18:01.379"/>
+</kw>
+<kw name="Button_register" library="Login_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_register_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 10:18:01.383" level="INFO">Clicking element 'xpath://button[@id='register-button']'.</msg>
+<status status="PASS" starttime="20231026 10:18:01.381" endtime="20231026 10:18:03.391"/>
+</kw>
+<status status="PASS" starttime="20231026 10:18:01.381" endtime="20231026 10:18:03.391"/>
+</kw>
+<kw name="close_all_brows" library="Login_resource">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231026 10:18:03.393" endtime="20231026 10:18:05.989"/>
+</kw>
+<status status="PASS" starttime="20231026 10:18:03.392" endtime="20231026 10:18:05.989"/>
+</kw>
+<status status="PASS" starttime="20231026 10:17:31.605" endtime="20231026 10:18:05.990"/>
+</test>
+<status status="PASS" starttime="20231026 10:17:31.090" endtime="20231026 10:18:05.992"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231026 10:17:31.598" level="ERROR">Error in file 'C:\Users\mitendra\PycharmProjects\Robot_DDT\Resorces\Login_resource.robot' on line 60: Creating keyword 'Error_message' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231026 10:17:31.976" level="WARN">The chromedriver version (117.0.5938.62) detected in PATH at F:\Python_tools\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.117); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
